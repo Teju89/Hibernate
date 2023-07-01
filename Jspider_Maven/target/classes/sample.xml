@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+
+   <!-- at every call of get bean, get only one object(single object) -->
+   <bean id="student" class="org.jsp.userDefinedClass.StudentInformation" scope="singleton">
+   </bean>
+   <!-- at every call of get bean, get new object -->
+   <bean id="bookObj" class="org.jsp.userDefinedClass.Book" scope="prototype"></bean>
+   
+   <!-- Dependency injection by using constructor -->
+   <bean id="studentObj" class="org.jsp.userDefinedClass.StudentInformation">
+   		<constructor-arg value="301"></constructor-arg>
+   		<constructor-arg value="Raja"></constructor-arg>
+   </bean>
+
+</beans>

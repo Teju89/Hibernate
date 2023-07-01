@@ -1,0 +1,4 @@
+127.0.0.1 - - [19/Jan/2023:19:52:54 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [19/Jan/2023:19:52:57 +0530] "GET /MVCWithoutXMLFile/index.jsp HTTP/1.1" 200 249
+0:0:0:0:0:0:0:1 - - [19/Jan/2023:19:52:57 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [19/Jan/2023:19:53:25 +0530] "GET /MVCWithoutXMLFile/multiplication?first=200&second=12 HTTP/1.1" 200 240

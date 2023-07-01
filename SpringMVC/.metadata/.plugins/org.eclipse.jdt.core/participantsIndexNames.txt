@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+D:\SpringMVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\456299266.index
+\MVCWithoutXMLFile\src\main\java
+D:\SpringMVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\36518304.index
+\Gmail\src\main\resources
+D:\SpringMVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\936735362.index
+\MVCWithoutXMLFile\src\main\java
+D:\SpringMVC\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4053416220.index
+\JspJntu\src\main\resources

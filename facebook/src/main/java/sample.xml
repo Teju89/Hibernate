@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+
+   <bean id="emp" class="com.jspider.facebook.Employee">
+   	<constructor-arg value = "1001"></constructor-arg>
+   </bean>
+   <bean id="emp2" class="com.jspider.facebook.Employee">
+   	<constructor-arg value="1002"></constructor-arg>
+   	<constructor-arg value="QWERTY"></constructor-arg>
+   </bean>
+   <!-- perform intialization without following constructor arguments order -->
+   <bean id="emp3" class="com.jspider.facebook.Employee">
+    <constructor-arg index="1" value="xyz"></constructor-arg>
+    <constructor-arg index="0" value="1003"></constructor-arg>
+    <constructor-arg index="2" value="30000"></constructor-arg>
+   </bean>
+   <!-- initialization of non-primitive data type -->
+   <bean id="departement" class="com.jspider.facebook.Department">
+   	<constructor-arg value="10"></constructor-arg>
+   	<constructor-arg value="PRODUCTION"></constructor-arg>
+   </bean>
+   <bean id="emp4" class="com.jspider.facebook.Employee">
+   	<constructor-arg index="3" ref="departement"></constructor-arg>
+   	<constructor-arg index="0" value="1005"></constructor-arg>
+   	<constructor-arg index="2" value="85000"></constructor-arg>
+   	<constructor-arg index="1" value="RANI"></constructor-arg>
+   </bean>
+   
+   <!-- initialization of collection -->
+   <bean id="dept1" class="com.jspider.facebook.Department">
+   	<constructor-arg value="20"></constructor-arg>
+   	<constructor-arg value="Accounts"></constructor-arg>
+   </bean>
+   
+   <bean id="emp5" class="com.jspider.facebook.Employee">
+   	<constructor-arg value="1006"></constructor-arg>
+   	<constructor-arg value="Dinga"></constructor-arg>
+   	<constructor-arg value="100000"></constructor-arg>
+   	<constructor-arg ref="dept1"></constructor-arg>
+   	<constructor-arg>
+   		<list>
+   			<value>Tally</value>
+   			<value>SAP</value>
+   			<value>Finance</value>
+   		</list>
+   	</constructor-arg>
+   </bean>
+
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+

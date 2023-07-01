@@ -1,0 +1,21 @@
+package org.jsp;
+
+import java.lang.reflect.Method;
+
+public class Sample {
+	public void run()
+	{
+		System.out.println("Show...");
+	}
+	
+	public static void main(String[] args) {
+		try {
+			Object newInstance = Class.forName("org.jsp.Sample").newInstance();
+			
+			 
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

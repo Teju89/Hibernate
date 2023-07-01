@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Tejal/src/main/webapp/WEB-INF/tejjo-servlet.xml&apos; to &apos;demo-servlet.xml&apos;" description="Rename resource &apos;tejjo-servlet.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/tejjo-servlet.xml" name="demo-servlet.xml" stamp="1673697261868" updateReferences="true"/>
+</session>

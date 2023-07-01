@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- to enable annotation -->
+<context:component-scan base-package="sample"></context:component-scan>
+<context:component-scan base-package="dao"></context:component-scan>
+<context:component-scan base-package="model"></context:component-scan>
+<context:component-scan base-package="service"></context:component-scan>
+
+<!-- this file is configured automatically for dispachter servlet 
+because, programmer mentioned name in Front Controller -->
+
+
+<!-- to configure View Resolver which will complete response given by controll -->
+<!-- it will inject model in view 
+	InternalViewResolver is implementation class for ViewResolver Interface
+-->
+   
+   <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+   	<!-- in which folder views means web pages are present i.e. How it will start-->
+  		<property name="prefix" value="/views/"></property>
+  	<!-- ending of web page file will be jsp  but no need to give page name-->
+  		<property name="suffix" value=".jsp"></property>
+   </bean>
+   
+   <bean id="ds" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+   	<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+   	<property name="url" value="jdbc:mysql://localhost:3306/springjdbc"></property>
+   	<property name="username" value="root"></property>
+   	<property name="password" value="12345"></property>
+   </bean>
+   
+   <bean id="template" class="org.springframework.jdbc.core.JdbcTemplate">
+   	<property name="dataSource" ref="ds"></property>
+   </bean>
+
+	<!-- When user sends request 
+		then entire path will be /WEB-INF/views/Hii.jsp 
+		Hii  view name is give by controller and now viewREsolver completes that response -->
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

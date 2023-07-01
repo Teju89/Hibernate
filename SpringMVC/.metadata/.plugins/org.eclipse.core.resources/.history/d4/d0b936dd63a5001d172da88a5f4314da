@@ -1,0 +1,17 @@
+package org.jsp;
+
+public class Sample {
+	public void run()
+	{
+		System.out.println("Show...");
+	}
+	
+	public static void main(String[] args) {
+		try {
+			Class<Sample> c1 = Class<Sample>.forName("org.jsp.Sample");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

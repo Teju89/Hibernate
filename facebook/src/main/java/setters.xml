@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- definition -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+            
+      <!-- Dependency injection by using setters -->
+      <bean id="student1" class="com.jspider.facebook.Student">
+      	<!-- variable name - name
+      	     value for variable - value -->
+      	<property name="percentage" value="88.99"></property>
+      	<property name="name" value="RAni"></property>
+      	<property name="rollNo" value="101"></property>
+      </bean>
+      <!-- college class object (Non-primitive data type) -->
+      <bean id="college1" class="com.jspider.facebook.College">
+      	<property name="cname" value="JNTU"></property>
+      	<property name="cId" value="3067"></property>
+      </bean>
+      <bean id="student2" class="com.jspider.facebook.Student">
+      	<property name="percentage" value="68.34"></property>
+      	<property name="rollNo" value="302"></property>
+      	<property name="college" ref="college1"></property>
+      	<property name="name" value="Raja"></property>
+      </bean>
+</beans>
